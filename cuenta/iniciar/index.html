@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">     
+        <link rel="stylesheet" type="text/css" href="../../css/estilo.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- iconos google -->
+        <title>Zoópolis</title>
+    </head>
+    <body>
+
+        <!--COMIENZA LA PARTE DE LA CABECERA-->
+        <header id="cabecera">
+            <div>    
+                <div class="row" style="margin: 0px;">
+                    <div class="col-md-3">
+                        <img id="logo" src="../../img/logo_oscuro.png" width="80%" height="100%">
+                    </div>
+                </div>
+                
+                <div id="subcabecera">
+                    <div id="banderas">
+                        <a id="bandera" href="#"><i class="flag-icon flag-icon-es"></i></a>
+                        <a id="bandera" href="#"><i class="flag-icon flag-icon-gb"></i></a>
+                        <a id="bandera" href="#"><i class="flag-icon flag-icon-pt"></i></a>
+                        <a id="bandera" href="#"><i class="flag-icon flag-icon-de"></i></a>
+                        <a id="bandera" href="#"><i class="flag-icon flag-icon-fr"></i></a>
+                    </div>
+                    <div id="redesSociales" class="light">
+                        <a id="redsocial" class="twitter" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a id="redsocial" class="youtube" href="#"><ion-icon name="logo-youtube"></ion-icon></a>                    
+                        <a id="redsocial" class="facebook" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a id="redsocial" class="instagram" href="#"><ion-icon name="logo-instagram"></ion-icon></a> 
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        </header>
+        <!--TERMINA LA PARTE DE LA CABECERA-->
+
+        <!--COMIENZA LA PARTE DEL MENU-->    
+        <nav class="navbar sticky-top navbar-expand-sm navbar-dark">
+            <!--BOTON PLEGABLE-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navmenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="../../index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="../../servicios/index.html">SERVICIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="../../cita/index.html">PEDIR CITA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="../../adoptar/index.html">ADOPTAR</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link waves-effect" href="../../tienda/index.html">TIENDA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect" href="../../contacto/index.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--TERMINA LA PARTE DEL MENU-->
+            
+        
+            
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-md-4 box">
+                    <br>
+                    <h3>Regístrate</h3>
+                    <h6>
+                        Regístrate para poder adquirir nuestros
+                        productos y para recibir noticias
+                    </h6>
+                    <br>
+                    <form method="post">
+                        <label for="nombre">Nombre</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><ion-icon name="person-outline"></ion-icon></div>
+                            </div>
+                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <br>
+
+                        <label for="correo">Correo</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><ion-icon name="mail-unread-outline"></ion-icon></div>
+                            </div>
+                            <input type="email" class="form-control" id="correo" placeholder="Tu correo" required>
+                        </div>
+                        <br>
+
+                        <label for="pass">Contraseña</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><ion-icon name="lock-closed-outline"></ion-icon></div>
+                            </div>
+                            <input type="password" class="form-control" id="pass" placeholder="Contraseña" minlength="6" required>
+                        </div>
+                        <br>
+
+                        <label for="repass">Repita su contraseña</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><ion-icon name="lock-closed-outline"></ion-icon></div>
+                            </div>
+                            <input type="password" class="form-control" id="repass" placeholder="Repita su contraseña" minlength="6" required>
+                        </div>
+                        <br>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="condiciones" required>
+                            <label class="form-check-label" for="condiciones">He leido y acepto la política de privacidad</label>
+                        </div>   
+                        <br>
+
+                        <button type="input" class="btn btn-primary btn-lg btn-block boton">Crear cuenta</button>
+                        <br>
+                    </form>  
+                </div>
+
+                <div class="col-md-4 box h-100 mb-auto">
+                    <br>
+                    <h3>Iniciar sesión</h3>
+                    <h6>
+                        Inicie sesión para poder comprar nuestros
+                        productos
+                    </h6>
+                    <br>
+                    <form method="post">
+                        <label for="correo">Correo</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><ion-icon name="mail-unread-outline"></ion-icon></div>
+                            </div>
+                            <input type="email" class="form-control" id="correo" placeholder="Tu correo" required>
+                        </div>
+                        <br>
+
+
+                        <label for="pass">Contraseña</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><ion-icon name="lock-closed-outline"></ion-icon></div>
+                            </div>
+                            <input type="password" class="form-control" id="pass" placeholder="Contraseña" required>
+                        </div>
+                        <br>
+
+                        <button type="input" class="btn btn-primary btn-lg btn-block boton mb-1">Iniciar sesión</button>
+                        
+                        <div class="text-center mb-3">
+                            <a href="#">¿Has olvidado tu contraseña?</a>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+
+        <!--EMPIEZA LA PARTE DEL FOOTER-->
+        <footer class="page-footer">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <!--ICONOS REDES SOCIALES-->
+                        <nav id="redesSociales" class="dark">
+                            <a id="redsocial" class="twitter" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a id="redsocial" class="youtube" href="#"><ion-icon name="logo-youtube"></ion-icon></a>                    
+                            <a id="redsocial" class="facebook" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a id="redsocial" class="instagram" href="#"><ion-icon name="logo-instagram"></ion-icon></a> 
+                        </nav>
+                        <h5 class="text-uppercase">Nuestras clínicas</h5>
+                    </div> 
+
+                    <div class="col-md-6"></div>  
+
+                    <div class="col-md-3">
+                        <!--LOGO-->
+                        <img src="../../img/logo_blanconegro.png" width="100%" height="100%">
+                    </div>
+                </div>   
+            
+                <div class="row">
+                <!--DIRECCIONES-->
+                <div class="col-md-3">
+                    <ul class="list-unstyled">
+                        <li class="clinica">
+                            <strong>Zoópolis El Puerto</strong><br>
+                            Calle Larga 64, 956051234<br>
+                            11500 El Puerto de Santa María 
+                        </li>
+                        <li class="clinica">
+                            <strong>Zoópolis Jerez</strong><br>
+                            Calle Ancha 32, 956871234<br>
+                            11406 Jerez de la Frontera 
+                        </li>
+                    </ul>
+                </div>
+                    <div class="col-md-3">
+                        <ul class="list-unstyled">
+                            <li class="clinica">
+                            <strong>Zoópolis Rota</strong><br>
+                            Avenida de la Paz 12, 956811234<br>
+                            11520 Rota<br>
+                        </li>
+                        <li class="clinica">
+                            <strong>Zoópolis Cádiz</strong><br>
+                            Avenida de la Bahía 6, 956621234<br>
+                            11071 Cádiz<br>
+                        </li>
+                    </ul>
+                </div>
+                <!--FIN DIRECCIONES-->
+                    
+                <!--MAPA-->
+                <div class="col-md-4">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="puerto-tab" data-toggle="pill" href="#puerto" role="tab" aria-controls="puerto" aria-selected="true">Puerto</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="rota-tab" data-toggle="pill" href="#rota" role="tab" aria-controls="rota" aria-selected="false">Rota</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="jerez-tab" data-toggle="pill" href="#jerez" role="tab" aria-controls="jerez" aria-selected="false">Jerez</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="cadiz-tab" data-toggle="pill" href="#cadiz" role="tab" aria-controls="cadiz" aria-selected="false">Cádiz</a>
+                          </li>
+                      </ul>
+                      <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="puerto" role="tabpanel" aria-labelledby="puerto">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3203.0510097726374!2d-6.226137348838962!3d36.601080486483745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dcfe906c651f1%3A0x183280fb4bfc440b!2sCalle%20Virgen%20de%20Los%20Milagros%2C%2064%2C%2011500%20El%20Puerto%20de%20Sta%20Mar%C3%ADa%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1607877315754!5m2!1ses!2ses" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="rota" role="tabpanel" aria-labelledby="rota">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.07068799253!2d-6.372017148838472!3d36.62468508516054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd8322550b293%3A0xa8e6b2f30cb173d4!2sAv.%20de%20la%20Paz%2C%2012%2C%2011520%20Rota%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1607877468020!5m2!1ses!2ses" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="jerez" role="tabpanel" aria-labelledby="jerez">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.436366343945!2d-6.145088948837228!3d36.68805068160549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dc69804209b07%3A0x7e593c3a05a387c2!2sCalle%20Ancha%2C%2032%2C%2011404%20Jerez%20de%20la%20Frontera%2C%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1607877539164!5m2!1ses!2ses" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="tab-pane fade" id="cadiz" role="tabpanel" aria-labelledby="cadiz">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.742483896649!2d-6.272728848493818!3d36.51207786258416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dd237a080df05%3A0x23737df1c17b6002!2sAv.%20de%20la%20Bahia%2C%206%2C%2011012%20C%C3%A1diz!5e0!3m2!1ses!2ses!4v1607877606877!5m2!1ses!2ses" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                      </div>
+                </div>
+                <!--FIN MAPA-->
+                <div class="col-md-2 politicas">  
+                    <!-- AVISOS Y POLÍTICAS -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="../../legal/aviso/index.html">Aviso legal</a>
+                        </li>
+                        <li>
+                            <a href="../../legal/cookies/index.html">Política de Cookies</a>
+                        </li>
+                        <li>
+                            <a href="../../legal/privacidad/index.html">Política de privacidad</a>
+                        </li>
+                        <li>
+                            <a href="../../legal/envio/index.html">Condiciones de envío</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </footer>
+
+    <!--TERMINA LA PARTE DEL FOOTER-->
+
+
+        <!--SCRIPTS-->
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
