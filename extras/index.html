@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extras</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+     <!--FUNCION PARA ANIMACION CON JQUERY-->
+     <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".cajaaviso").animate({
+                    width: 'toggle'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-sm navbar-dark">
+        <!--BOTON PLEGABLE-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navmenu"
+            aria-controls="navmenu" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navmenu">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link waves-effect" href="../index.html">VOLVER A ZOÓPOLIS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#picture">ETIQUETA PICTURE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#filtros">FILTROS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#reproductor-video">REPRODUCTOR DE VÍDEO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#formatos">FORMATOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#svg-path">SVG y PATH</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#animacion">ANIMACIÓN JQUERY</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="fullvideo">
+        <video preload="auto" autoplay="autoplay" muted="muted" loop="loop" playsinline="">
+            <source type="video/mp4" src="../img/extras/costarica.mp4">
+        </video>
+    </div>
+
+    <div class="container extra">
+        <div id="picture">
+            <hr>
+            <h1>ETIQUETA &lt;picture&gt;</h1>
+            <h6>Cambia la imagen según el largo y el ancho de la página.</h6>
+            <picture>
+                <source srcset="../img/extras/vertical.jpg" title="Foto vertical" media="(orientation: portrait)">
+                <source srcset="../img/extras/1000.jpg" title="Min 700px" media="(min-width: 700px)">
+                <source srcset="../img/extras/700.jpg" title="Máx 700px" media="(max-width: 700px)">
+                <img src="../img/adiestramiento.jpg" alt="MDN">
+            </picture>
+        </div>
+
+        <br>
+
+        <div id="filtros">
+            <hr>
+            <h1>FILTROS</h1>
+            <h6>Tres imágenes con tres filtros diferentes</h6>
+            <img src="../img/gato.jpg" title="Blanco y negro" alt="Blanco y negro" width="33%" height="33%" class="byn">
+            <img src="../img/gato.jpg" title="Sepia" alt="Sepia" width="33%" height="33%" class="sepia">
+            <img src="../img/gato.jpg" title="Difuminado" alt="Difuminado" width="33%" height="33%" class="blur">
+        </div>
+        <!--<div id="reproductor-video">
+            <h1>REPRODUCTOR DE VÍDEO</h1>
+            <h6>Intenta reproducir un vídeo en dos formatos, si no puede reproducirlo en ninguno aparecerá el mensaje: "Tu navegador no soporta la reproducción de videos"</h6>
+            <video width="100%" height="40%" controls>
+                <source src="../img/extras/costarica.mp4" type="video/mp4">
+                <source src="../img/extras/costarica.webm" type="video/ogg">
+                Tu navegador no soporta la reproducción de videos
+            </video>
+            <div id="controls">
+                <button id="start">Play</button>
+                <button id="stop" disabled>Stop</button>
+                <button id="pause" disabled>Pause</button>
+                <button id="plus" title="Volum" disabled>Up</button>
+                <button id="minus" title="Volum" disabled>Down</button>
+                <button id="mute" disabled>Mute</button>
+             </div>
+            <div id="progressbar">
+               <div id="loadingprogress"></div>
+               <div id="butterfly"></div>
+            </div>-->
+        <br>
+
+        <div id="svg-path">
+            <hr>
+            <h1>ELEMENTO SVG Y PATH</h1>
+            <h6>Contruir una imagen con el elemento path</h6>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                <polygon points="20,20 100,20 100,100 30,110" />
+                <path d="M20,20 100,20 100,100 30,110z" fill="green" transform="translate(100,0)" />
+            </svg>
+            <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M3 10v11h6v-7h6v7h6v-11L12,3z" />
+            </svg>
+            <svg height="210" width="400">
+                <path d="M 70 340 l 130 -300" stroke="red" stroke-width="3" fill="none" />
+                <path d="M 220 40 l 130 300" stroke="red" stroke-width="3" fill="none" />
+                <path d="M 135 40 l 150 0" stroke="green" stroke-width="3" fill="none" />
+                <path d="M 100 340 q 100 -545 200 -100" stroke="blue" stroke-width="5" fill="none" />
+
+                <g stroke="black" stroke-width="3" fill="black">
+                    <circle cx="210" cy="40" r="7" stroke="orange" />
+                </g>
+            </svg>
+        </div>
+
+        <div id="animacion">
+            <hr>
+            <h1>ANIMACIÓN CON JQUERY</h1>
+            <h6>Ejemplo de animación utilizando la tecnología jQuery</h6>
+            <button type="button" class="btn btn-primary btn-lg boton">Mostrar/ocultar aviso</button>
+            <div class="cajaaviso">Esto es un ejemplo de animación con jQuery</div>
+        </div>
+
+    </div>
+    </div>
+
+    
+    <!--SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+    
+</body>
+
+</html>

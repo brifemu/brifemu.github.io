@@ -14,7 +14,7 @@
         <header id="cabecera">
             <div>    
                 <div class="col-md-3" >
-                    <img id="logo" src="./img/logo_oscuro.png" width="80%" height="100%">
+                    <img id="logo" src="./img/logo_oscuro.png" width="80%" height="100%" alt="Logo Zoópolis">                    
                 </div>
                 <div id="subcabecera">
                     <div id="banderas">
@@ -24,11 +24,23 @@
                         <a id="bandera" href="#"><i class="flag-icon flag-icon-de"></i></a>
                         <a id="bandera" href="#"><i class="flag-icon flag-icon-fr"></i></a>
                     </div>
-                    <div id="redesSociales" class="light">
-                        <a id="redsocial" class="twitter" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a id="redsocial" class="youtube" href="#"><ion-icon name="logo-youtube"></ion-icon></a>                    
-                        <a id="redsocial" class="facebook" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        <a id="redsocial" class="instagram" href="#"><ion-icon name="logo-instagram"></ion-icon></a> 
+                    <div id="redesSociales">
+                        <div>
+                            <a id="redsocial" class="twitter" href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                            <a id="redsocial" class="youtube" href="#"><ion-icon name="logo-youtube"></ion-icon></a>                    
+                            <a id="redsocial" class="facebook" href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                            <a id="redsocial" class="instagram" href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        </div>
+                    </div>
+                    <div class="reproductor">
+                        <audio id="player" src="./audio/biscuit.wav" alt="Pista de audio 'Biscuit'"></audio>
+                        <div >
+                            <ion-icon id="play" name="play-outline"></ion-icon>
+                            <ion-icon id="voldown" onclick="volDown" name="volume-low-outline"></ion-icon>
+                            <ion-icon id="volup" onclick="volUp" name="volume-medium-outline"></ion-icon>
+                            <ion-icon id="volmute" onclick="mute" name="volume-mute-outline"></ion-icon>
+                        </div>
+                         
                     </div>
                 </div>
             </div> 
@@ -80,7 +92,7 @@
                         <p>En nuestras clínicas encontrarás todo lo necesario para darle a sus mascotas la atención médica que necesita</p>
                     </div>
                     <div class="col-sm-6" style="padding: 0px;">
-                        <img src="./img/quienes_somos.jpg" class="ajustada"/>
+                        <img src="./img/quienes_somos.jpg" class="ajustada" alt="Una chica abre la puerta de un trasnportin mientas un hombre lo sujeta"/>
                     </div>
                 </article>
                 <h1 style="padding-left: 0.4em">Últimas noticias</h1>
@@ -105,7 +117,7 @@
                                         las molestias y agradecemos vuestra comprensión.</p>
                                     </div>
                                     <div class="col-sm-4">
-                                        <img src="./img/noticia_obra.jpg" class="ajustada">
+                                        <img src="./img/noticia_obra.jpg" class="ajustada" alt="Un trabajador y una trabajadora observan una obra">
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +130,7 @@
                                         mascotas a un precio único!</p>
                                     </div>
                                     <div class="col-sm-4">
-                                        <img src="./img/noticia-navidad.jpg" class="ajustada">
+                                        <img src="./img/noticia-navidad.jpg" class="ajustada" alt="Familia sentada junto a la chimenea, la mujer abraza a su bebé mientras su esposo la besa. El bebé acaricia el perro">
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +144,7 @@
                                         </p>
                                     </div>
                                     <div class="col-sm-4">
-                                        <img src="./img/noticia-vacuna.jpg" class="ajustada">
+                                        <img src="./img/noticia-vacuna.jpg" class="ajustada" alt="Mujer uso estetoscopio con un perro">
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +155,7 @@
                 <!--GALERIA Y CARRUSEL-->
                 <article id="bot" class="row box-nobackground">
                         <div class="col-sm-3" style="padding: 0;">
-                            <a href="./galeria/index.html"><img src="./img/galeria.jpg" class="ajustada"></a>
+                            <a href="./galeria/index.html"><img src="./img/galeria.jpg" class="ajustada" alt="Galería de imágenes"></a>
                         </div>
                         <div class="col-sm-1"></div>
                         <div class="col-sm-8" style="background-color: #3C4259; padding-top: 1em;">
@@ -324,6 +336,9 @@
                     <!-- AVISOS Y POLÍTICAS -->
                     <ul class="list-unstyled">
                         <li>
+                            <a href="./extras/index.html">Ejercicios adicionales</a>
+                        </li>
+                        <li>
                             <a href="./legal/aviso/index.html">Aviso legal</a>
                         </li>
                         <li>
@@ -343,7 +358,7 @@
 
     <!--TERMINA LA PARTE DEL FOOTER-->
 
-
+        <script src="./js/reproductor/script.js"></script>
         <!--SCRIPTS-->
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
