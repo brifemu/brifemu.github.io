@@ -316,7 +316,7 @@ a.sesion:hover {
     border-right:$primario 2px solid;
 }
 
-//reproductor
+//reproductor audio
 #play {
     color: green;
     font-size: 2.1em;
@@ -392,4 +392,29 @@ img.blur{
     background: $primario;
     margin-top: 30px;
     color: white;
+}
+
+//reproductor video
+#vstarticon {
+    color: white;
+    font-size: 2.15em;
+    justify-content: center;
+}
+
+#vvoldown, #vvolup {
+    color: white;
+    font-size: 2.15em;
+    justify-content: center;
+}
+
+#vvolmute {
+    color: white;
+    font-size: 2.15em;
+    justify-content: center;
+}
+
+#vstop{
+    color: white;
+    font-size: 1.6em;
+    justify-content: center;
 }

@@ -44,7 +44,7 @@
                     <a class="nav-link waves-effect" href="#reproductor-video">REPRODUCTOR DE VÍDEO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link waves-effect" href="#formatos">FORMATOS</a>
+                    <a class="nav-link waves-effect" href="#formatos">FORMATOS Y WEBP</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="#svg-path">SVG y PATH</a>
@@ -52,6 +52,10 @@
 
                 <li class="nav-item">
                     <a class="nav-link waves-effect" href="#animacion">ANIMACIÓN JQUERY</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link waves-effect" href="#animacionGoogle">ANIMACIÓN CON GOOGLE</a>
                 </li>
 
             </ul>
@@ -70,10 +74,10 @@
             <h1>ETIQUETA &lt;picture&gt;</h1>
             <h6>Cambia la imagen según el largo y el ancho de la página.</h6>
             <picture>
-                <source srcset="../img/extras/vertical.jpg" title="Foto vertical" media="(orientation: portrait)">
-                <source srcset="../img/extras/1000.jpg" title="Min 700px" media="(min-width: 700px)">
-                <source srcset="../img/extras/700.jpg" title="Máx 700px" media="(max-width: 700px)">
-                <img src="../img/adiestramiento.jpg" alt="MDN">
+                <source srcset="../img/extras/vertical.jpg" title="Foto vertical" media="(orientation: portrait)" alt="Imagen de la torre Eiffel">
+                <source srcset="../img/extras/1000.jpg" title="Min 700px" media="(min-width: 700px)" alt="Imagen de la torre Eiffel">
+                <source srcset="../img/extras/700.jpg" title="Máx 700px" media="(max-width: 700px)" alt="Imagen de la torre Eiffel">
+                <img src="../img/adiestramiento.jpg" alt="MDN" alt="Imagen de adiestramiento">
             </picture>
         </div>
 
@@ -83,31 +87,41 @@
             <hr>
             <h1>FILTROS</h1>
             <h6>Tres imágenes con tres filtros diferentes</h6>
-            <img src="../img/gato.jpg" title="Blanco y negro" alt="Blanco y negro" width="33%" height="33%" class="byn">
-            <img src="../img/gato.jpg" title="Sepia" alt="Sepia" width="33%" height="33%" class="sepia">
-            <img src="../img/gato.jpg" title="Difuminado" alt="Difuminado" width="33%" height="33%" class="blur">
+            <img src="../img/gato.jpg" title="Blanco y negro" alt="Blanco y negro" width="33%" height="33%" class="byn" alt="Imagen de un gato en blanco y negro">
+            <img src="../img/gato.jpg" title="Sepia" alt="Sepia" width="33%" height="33%" class="sepia" alt="Imagen de un gato con filtro sepia">
+            <img src="../img/gato.jpg" title="Difuminado" alt="Difuminado" width="33%" height="33%" class="blur" alt="Imagen de una gato con filtro difuminado">
         </div>
-        <!--<div id="reproductor-video">
+
+
+        <div id="reproductor-video">
+            <hr>
             <h1>REPRODUCTOR DE VÍDEO</h1>
             <h6>Intenta reproducir un vídeo en dos formatos, si no puede reproducirlo en ninguno aparecerá el mensaje: "Tu navegador no soporta la reproducción de videos"</h6>
-            <video width="100%" height="40%" controls>
+            <video id="video" width="100%" height="40%" controls>
                 <source src="../img/extras/costarica.mp4" type="video/mp4">
                 <source src="../img/extras/costarica.webm" type="video/ogg">
                 Tu navegador no soporta la reproducción de videos
             </video>
             <div id="controls">
-                <button id="start">Play</button>
-                <button id="stop" disabled>Stop</button>
-                <button id="pause" disabled>Pause</button>
-                <button id="plus" title="Volum" disabled>Up</button>
-                <button id="minus" title="Volum" disabled>Down</button>
-                <button id="mute" disabled>Mute</button>
+                <button id="vstart" class="btn btn-primary btn-lg boton-oscuro"><ion-icon id="vstarticon" name="play-outline"></ion-icon></button>
+                <button id="vstop" class="btn btn-primary btn-lg boton-oscuro"><ion-icon id="vstop" name="stop-outline"></ion-icon></button>
+                <button id="vplus" title="Volum" class="btn btn-primary btn-lg boton-oscuro"><ion-icon id="vvolup" onclick="volUp" name="volume-medium-outline"></ion-icon></button>
+                <button id="vminus" title="Volum" class="btn btn-primary btn-lg boton-oscuro"><ion-icon id="vvoldown" onclick="volDown" name="volume-low-outline"></ion-icon></button>
+                <button id="vmute" class="btn btn-primary btn-lg boton-oscuro"><ion-icon id="vvolmute" onclick="mute" name="volume-mute-outline"></ion-icon></button>
              </div>
-            <div id="progressbar">
-               <div id="loadingprogress"></div>
-               <div id="butterfly"></div>
-            </div>-->
+        </div>
         <br>
+
+        <div id="formatos">
+            <hr>
+            <h1>FORMATOS DE IMÁGENES</h1>
+            <h6>Mostrar diferentes formatos de imágenes. Diferencias en transparencia y calidad de imagen</h6>
+            <img src="../img/extras/logo_oscuro.png" title="Imagen png" alt="El logo de Zoópolis en formato png">
+            <img src="../img/extras/logo_oscuro.jpg" title="Imagen jpg" alt="El logo de Zoópolis en formato jpg">
+            <img src="../img/extras/logo_oscuro.gif" title="Imagen gif" alt="El logo de Zoópolis en formato gif">
+            <img src="../img/extras/logo_oscuro.webp" title="Imagen webp" alt="El logo de Zoópolis en formato webp">
+        </div>
+
 
         <div id="svg-path">
             <hr>
@@ -140,17 +154,26 @@
             <div class="cajaaviso">Esto es un ejemplo de animación con jQuery</div>
         </div>
 
+        <div id="animacionGoogle">
+            <hr>
+            <h1>ANIMACIÓN CON GOOGLE</h1>
+            <h6>Ejemplo de animación utilizando la aplicación de Google Web Designer</h6>
+        </div>
+        
+
     </div>
     </div>
 
     
     <!--SCRIPTS-->
+    <script src="../js/reproductor/video.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 
     
 </body>

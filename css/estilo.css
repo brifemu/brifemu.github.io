@@ -312,11 +312,31 @@ img.sepia {
 img.blur {
   filter: blur(3px); }
 
-.cajaaviso {
+.aviso {
   width: 80%;
   height: 50px;
   background: #3C4259;
   margin-top: 30px;
   color: white; }
+
+#vstarticon {
+  color: white;
+  font-size: 2.15em;
+  justify-content: center; }
+
+#vvoldown, #vvolup {
+  color: white;
+  font-size: 2.15em;
+  justify-content: center; }
+
+#vvolmute {
+  color: white;
+  font-size: 2.15em;
+  justify-content: center; }
+
+#vstop {
+  color: white;
+  font-size: 1.6em;
+  justify-content: center; }
 
 /*# sourceMappingURL=estilo.css.map */
