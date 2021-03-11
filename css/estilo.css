@@ -8,7 +8,7 @@ h1, h2, h3, h4 h5, h6 {
 
 /*PARTE DE LA CABECERA*/
 #cabecera {
-  background-image: url("../img/cabecera.jpg");
+  background-image: url("../img/cabecera.webp");
   background-size: cover;
   background-repeat: no-repeat;
   width: auto;
@@ -74,6 +74,13 @@ h1, h2, h3, h4 h5, h6 {
   margin: auto !important;
   display: flex;
   justify-content: space-between; }
+
+li.nav-item a.nav-link.waves-effect {
+  color: #e6e4e4; }
+
+li.nav-item.active a.nav-link.waves-effect {
+  color: white;
+  font-weight: bold; }
 
 /*FOOTER*/
 .page-footer {
@@ -209,7 +216,7 @@ a.sesion:hover {
   color: #8392A6; }
 
 .fondo-perro {
-  background-image: url("../img/perro_triste.jpg");
+  background-image: url("../img/perro_triste.webp");
   background-size: cover;
   background-repeat: no-repeat;
   width: auto;
@@ -217,7 +224,7 @@ a.sesion:hover {
   padding: 2em; }
 
 .fondo-compra {
-  background-image: url("../img/compra_finalizada.jpg");
+  background-image: url("../img/compra_finalizada.webp");
   background-size: cover;
   background-repeat: no-repeat;
   width: auto;

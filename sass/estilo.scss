@@ -94,6 +94,19 @@ h1, h2, h3, h4 h5, h6 {
     justify-content: space-between;
 }
 
+    li.nav-item {
+        a.nav-link.waves-effect {
+            color: $navnoactivoFuente;
+        }
+        
+    }
+    li.nav-item.active {
+        a.nav-link.waves-effect {
+            color: $navactivoFuente;
+            font-weight: bold;
+        } 
+    }
+    
 
 
 /*FOOTER*/
